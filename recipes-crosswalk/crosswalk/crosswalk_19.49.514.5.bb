@@ -162,9 +162,8 @@ LICENSE_third_party/libjpeg_turbo = "BSD-3-Clause"
 S = "${WORKDIR}/crosswalk-${PV}"
 
 LIC_FILES_CHKSUM = "\
-    file://${S}/xwalk/LICENSE;md5=c3d4637b0c8ceffb4111debb006efe58 \
-    file://${S}/LICENSE.chromium_os;md5=87dd8458232da630f5617873d42d8350 \
     file://${S}/LICENSE;md5=0fca02217a5d49a14dfe2d11837bb34d \
+    file://${S}/LICENSE.chromium_os;md5=87dd8458232da630f5617873d42d8350 \
     file://${S}/base/third_party/dmg_fp/LICENSE;md5=0893720de1a2e17053089dc16f743e11 \
     file://${S}/base/third_party/dynamic_annotations/LICENSE;md5=b6bd7011ecc1a4f7ac3525589f45e565 \
     file://${S}/base/third_party/libevent/LICENSE;md5=a2b0302a710150293fb85d2bfabd3de6 \
@@ -292,8 +291,8 @@ LIC_FILES_CHKSUM = "\
     file://${S}/third_party/usb_ids/LICENSE;md5=8f694e3758e3e57a5223bfa2bf29d452 \
     file://${S}/third_party/usrsctp/LICENSE;md5=d8ad24c2ddd0e7bc1b0a6e4c7c80443e \
     file://${S}/third_party/v4l-utils/COPYING.libv4l;md5=d749e86a105281d7a44c2328acebc4b0 \
-    file://${S}/third_party/wayland/src/COPYING;md5=b31d8f53b6aaf2b4985d7dd7810a70d1 \
     file://${S}/third_party/wayland-protocols/src/COPYING;md5=c7b12b6702da38ca028ace54aae3d484 \
+    file://${S}/third_party/wayland/src/COPYING;md5=b31d8f53b6aaf2b4985d7dd7810a70d1 \
     file://${S}/third_party/web-animations-js/LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
     file://${S}/third_party/webrtc/LICENSE;md5=ad296492125bc71530d06234d9bfebe0 \
     file://${S}/third_party/woff2/LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
@@ -303,8 +302,9 @@ LIC_FILES_CHKSUM = "\
     file://${S}/third_party/yasm/source/patched-yasm/COPYING;md5=26c9f3d11f88911950f9ff62189d3d4f \
     file://${S}/third_party/zlib/LICENSE;md5=877a2b944edf64135dec8edc66aad847 \
     file://${S}/url/third_party/mozilla/LICENSE.txt;md5=437ced1e9b232651b0912a9594da43b2 \
-    file://${S}/v8/LICENSE.strongtalk;md5=956a43818dd13f2e93088fc2c93589d2 \
     file://${S}/v8/LICENSE;md5=71f2c485344c921f659ea9f7d895ea22 \
+    file://${S}/v8/LICENSE.strongtalk;md5=956a43818dd13f2e93088fc2c93589d2 \
+    file://${S}/xwalk/LICENSE;md5=c3d4637b0c8ceffb4111debb006efe58 \
     "
 
 SRC_URI += "\
