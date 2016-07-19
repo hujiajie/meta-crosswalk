@@ -159,12 +159,6 @@ LICENSE_third_party/iccjpeg = "BSD-3-Clause"
 LICENSE_third_party/libjpeg = "BSD-3-Clause"
 LICENSE_third_party/libjpeg_turbo = "BSD-3-Clause"
 
-# We don't ship the commented directories bellow.
-# LICENSE_chrome/installer/mac/third_party/xz = "PD & LGPL-2.1 & GPL-2.0 & GPL-3.0"
-# LICENSE_third_party/apple_sample_code = "Custom license"
-# LICENSE_third_party/bspatch = "BSD-Protection"
-# LICENSE_third_party/swiftshader = "Proprietary"
-
 S = "${WORKDIR}/crosswalk-${PV}"
 
 LIC_FILES_CHKSUM = "\
@@ -184,7 +178,6 @@ LIC_FILES_CHKSUM = "\
     file://${S}/buildtools/third_party/libc++/trunk/LICENSE.TXT;md5=149d2e8e8d99e3a2d702997b5f919fd9 \
     file://${S}/buildtools/third_party/libc++abi/trunk/LICENSE.TXT;md5=9041c9f38eb0f718f408e28ce138bb9a \
     file://${S}/chrome/installer/mac/third_party/bsdiff/LICENSE;md5=0dbe7a50f028269750631fcbded3846a \
-    file://${S}/chrome/installer/mac/third_party/xz/LICENSE;md5=8bbde65ae0523dc878ed1ac1252d2d14 \
     file://${S}/chrome/third_party/chromevox/LICENSE;md5=45739090b454125d851ac7bb1bbd23a2 \
     file://${S}/chrome/third_party/mozilla_security_manager/LICENSE;md5=0c259b853bbf067b361100ce560adce7 \
     file://${S}/crypto/third_party/nss/LICENSE;md5=8041b8fc71168066400fe00f4452813a \
@@ -200,11 +193,9 @@ LIC_FILES_CHKSUM = "\
     file://${S}/third_party/android_swipe_refresh/LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
     file://${S}/third_party/angle/LICENSE;md5=10305d79487367a5e938772c27246ac1 \
     file://${S}/third_party/apple_apsl/LICENSE;md5=c8c14a9f985552dba8d3edbd76660088 \
-    file://${S}/third_party/apple_sample_code/LICENSE;md5=d4c6eafcba87d49fffb4620359f7fe01 \
     file://${S}/third_party/ashmem/LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
     file://${S}/third_party/boringssl/NOTICE;md5=f9a8f968107345e0b75aa8c2ecaa7ec8 \
     file://${S}/third_party/brotli/LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
-    file://${S}/third_party/bspatch/LICENSE;md5=7c2ad392281bc3d9b04a31102ee7abdd \
     file://${S}/third_party/cacheinvalidation/src/google/cacheinvalidation/COPYING;md5=3b83ef96387f14655fc854ddc3c6bd57 \
     file://${S}/third_party/cardboard-java/LICENSE;md5=c3f788a68195979b454e77b6115120e6 \
     file://${S}/third_party/chromite/LICENSE;md5=87dd8458232da630f5617873d42d8350 \
@@ -294,7 +285,6 @@ LIC_FILES_CHKSUM = "\
     file://${S}/third_party/speech-dispatcher/COPYING;md5=5828ebb4b7590269a994ed46b0a70df0 \
     file://${S}/third_party/sqlite/LICENSE;md5=7256769d4613c0af5a72be32ba20ccf7 \
     file://${S}/third_party/sudden_motion_sensor/LICENSE;md5=6f89397ba4dda73a940f27f76e9ad9d4 \
-    file://${S}/third_party/swiftshader/LICENSE;md5=c76873b87f91163662b8885805385725 \
     file://${S}/third_party/talloc/LICENSE;md5=e437634499a4434b4a24518195ff357d \
     file://${S}/third_party/tcmalloc/LICENSE;md5=8ecc91ee1a2c17333b40126bfa32b7ca \
     file://${S}/third_party/tlslite/LICENSE;md5=124965e4b4f94b27c639fb4a25ff3ec4 \
