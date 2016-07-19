@@ -310,6 +310,7 @@ LIC_FILES_CHKSUM = "\
     file://${S}/url/third_party/mozilla/LICENSE.txt;md5=437ced1e9b232651b0912a9594da43b2 \
     file://${S}/v8/LICENSE;md5=71f2c485344c921f659ea9f7d895ea22 \
     file://${S}/v8/LICENSE.strongtalk;md5=956a43818dd13f2e93088fc2c93589d2 \
+    file://${S}/v8/src/third_party/fdlibm/LICENSE;md5=b17367d6c97e638599071d99a3049dfe \
     file://${S}/xwalk/LICENSE;md5=c3d4637b0c8ceffb4111debb006efe58 \
     "
 
