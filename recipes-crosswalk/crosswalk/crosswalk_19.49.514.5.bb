@@ -185,6 +185,7 @@ LIC_FILES_CHKSUM = "\
     file://${S}/native_client/LICENSE;md5=cbbd27594afd089daa160d3a16dd515a \
     file://${S}/native_client_sdk/src/libraries/third_party/newlib-extras/README;md5=e944d73ca3817b7ca8656eafb9497fed \
     file://${S}/sdch/open-vcdiff/COPYING;md5=ff820d4ddc1ba05b6fd37b41a21506f9 \
+    file://${S}/third_party/WebKit/LICENSE_FOR_ABOUT_CREDITS;md5=11e90d553b211de885f245900c4ccf89 \
     file://${S}/third_party/accessibility-audit/LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
     file://${S}/third_party/android_crazy_linker/LICENSE;md5=997351b5bb1c56ca5be66be8060bb383 \
     file://${S}/third_party/android_data_chart/LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
@@ -304,7 +305,6 @@ LIC_FILES_CHKSUM = "\
     file://${S}/url/third_party/mozilla/LICENSE.txt;md5=437ced1e9b232651b0912a9594da43b2 \
     file://${S}/v8/LICENSE.strongtalk;md5=956a43818dd13f2e93088fc2c93589d2 \
     file://${S}/v8/LICENSE;md5=71f2c485344c921f659ea9f7d895ea22 \
-    file://${S}/webkit/LICENSE;md5=11e90d553b211de885f245900c4ccf89 \
     "
 
 SRC_URI += "\
