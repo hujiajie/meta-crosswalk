@@ -146,7 +146,6 @@ LICENSE_third_party/yasm = "BSD-2-Clause | BSD-3-Clause"
 LICENSE_third_party/zlib = "Zlib"
 LICENSE_url/third_party/mozilla = "BSD & MPL-1.1 | GPL-2.0 | LGPL-2.1"
 LICENSE_v8 = "BSD"
-LICENSE_v8/strongtalk = "BSD"
 
 # These "LGPL-3.0" libraries are not linked with Crosswalk binary but
 # with the native client helper and libosmesa.so respectively.
