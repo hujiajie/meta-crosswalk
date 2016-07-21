@@ -315,8 +315,8 @@ SRC_URI += "\
     file://include.gypi \
     "
 
-SRC_URI[tarball.md5sum] = "951d93f0089f960d18ceaf9b9aa06e36"
-SRC_URI[tarball.sha256sum] = "e744d043ac93f63fef2aa892bcaa6d33a57a9f5ac277a9307eb96cd020296016"
+SRC_URI[tarball.md5sum] = "09699349e7e82752608d7b68bc405680"
+SRC_URI[tarball.sha256sum] = "f1550b648c6b1c29b4016337feefacc35596fca86a0e1f76cfae9e35e27b6fd7"
 
 COMPATIBLE_MACHINE = "(-)"
 COMPATIBLE_MACHINE_i586 = "(.*)"
