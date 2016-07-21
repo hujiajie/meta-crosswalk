@@ -333,21 +333,41 @@ COMPATIBLE_MACHINE_armv7a = "(.*)"
 inherit gettext perlnative pkgconfig pythonnative
 
 DEPENDS = "\
+    alsa-lib \
+    atk \
+    cairo \
+    cups \
+    dbus \
     elfutils \
     expat \
     flac \
     fontconfig \
+    freetype \
+    gcc-runtime \
+    gdk-pixbuf \
     glib-2.0 \
     gtk+ \
     harfbuzz \
     jpeg \
     libdrm \
     libevent \
+    libgcc \
     libpng \
     libusb \
+    libx11 \
+    libxcomposite \
+    libxcursor \
+    libxdamage \
+    libxext \
+    libxfixes \
+    libxi \
+    libxrandr \
+    libxrender \
     libxslt \
     libxss \
+    libxtst \
     ninja-native \
+    nspr \
     nss \
     pango \
     pciutils \
