@@ -346,6 +346,7 @@ DEPENDS = "\
     libdrm \
     libevent \
     libgcc \
+    libnotify \
     libpng \
     libusb \
     libx11 \
@@ -370,6 +371,8 @@ DEPENDS = "\
     speex \
     yasm-native \
     "
+
+RDEPENDS_${PN} += "ca-certificates xdg-utils"
 
 # Special configuration for ARM builds
 ARMFPABI_armv7a = "${@bb.utils.contains('TUNE_FEATURES', 'callconvention-hard', '-Darm_float_abi=hard', '-Darm_float_abi=softfp', d)}"
