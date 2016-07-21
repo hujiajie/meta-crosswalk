@@ -324,7 +324,7 @@ COMPATIBLE_MACHINE_x86-64 = "(.*)"
 COMPATIBLE_MACHINE_armv6 = "(.*)"
 COMPATIBLE_MACHINE_armv7a = "(.*)"
 
-inherit gettext
+inherit gettext perlnative pkgconfig pythonnative
 
 DEPENDS = "\
     elfutils \
