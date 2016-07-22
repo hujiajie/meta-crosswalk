@@ -329,17 +329,20 @@ inherit gettext perlnative pkgconfig pythonnative
 DEPENDS = "\
     alsa-lib \
     atk \
+    bison-native \
     cairo \
     cups \
     dbus \
     elfutils \
     expat \
     flac \
+    flex-native \
     fontconfig \
     freetype \
     gcc-runtime \
     gdk-pixbuf \
     glib-2.0 \
+    gperf-native \
     gtk+ \
     harfbuzz \
     jpeg \
