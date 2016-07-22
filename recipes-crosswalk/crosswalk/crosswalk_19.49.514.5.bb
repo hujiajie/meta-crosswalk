@@ -346,6 +346,7 @@ DEPENDS = "\
     gtk+ \
     harfbuzz \
     jpeg \
+    krb5 \
     libdrm \
     libevent \
     libgcc \
