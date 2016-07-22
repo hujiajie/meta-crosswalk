@@ -371,7 +371,7 @@ DEPENDS = "\
     pango \
     pciutils \
     pkgconfig-native \
-    pulseaudio \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'pulseaudio', 'pulseaudio', '', d)} \
     speex \
     yasm-native \
     "
@@ -399,6 +399,7 @@ DEFAULT_CONFIGURATION = "\
     -Duse_gio=0 \
     -Duse_gnome_keyring=0 \
     -Duse_kerberos=0 \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'pulseaudio', '-Duse_pulseaudio=1', '-Duse_pulseaudio=0', d)} \
     -Duse_system_fontconfig=1 \
     -Duse_system_expat=1 \
     -Duse_system_flac=1 \
