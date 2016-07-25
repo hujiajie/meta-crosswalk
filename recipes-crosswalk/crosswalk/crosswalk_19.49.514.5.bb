@@ -388,7 +388,7 @@ DEFAULT_CONFIGURATION = "\
     -Dlinux_use_bundled_gold=0 \
     -Dlinux_use_debug_fission=0 \
     ${@bb.utils.contains('DISTRO_FEATURES', 'ld-is-gold', '-Dlinux_use_gold_flags=1', '-Dlinux_use_gold_flags=0', d)} \
-    -Dsysroot='' \
+    -Dsysroot='${STAGING_DIR_HOST}' \
     -Ddisable_nacl=1 \
     -Denable_printing=0 \
     -Dremoting=0 \
