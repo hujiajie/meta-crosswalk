@@ -415,17 +415,20 @@ DEFAULT_CONFIGURATION = "\
 # -Duse_system_opus=1
 # -Duse_system_sqlite=1
 
-# Yocto's libav doesn't fully replace ffmpeg,
-# and zlib is missing minizip/unzip.h.
+# System ffmpeg requires a matching entry in LICENSE_FLAGS_WHITELIST.
 # -Duse_system_ffmpeg=1
+
+# System zlib is missing minizip.
 # -Duse_system_zlib=1
+
+# System protobuf is a bit old.
+# -Duse_system_protobuf=1
 
 # Not available on Yocto, so we use
 # what comes bundled with Chromium.
 # -Duse_system_jsoncpp=1
 # -Duse_system_libsrtp=1
 # -Duse_system_libxnvctrl=1
-# -Duse_system_protobuf=1
 # -Duse_system_re2=1
 # -Duse_system_snappy=1
 # -Duse_system_v8=1
