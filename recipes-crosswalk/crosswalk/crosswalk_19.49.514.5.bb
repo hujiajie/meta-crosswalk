@@ -349,10 +349,12 @@ DEPENDS = "\
     krb5 \
     libdrm \
     libevent \
+    libexif \
     libgcc \
     libnotify \
     libpng \
     libusb \
+    libwebp \
     libx11 \
     libxcomposite \
     libxcursor \
@@ -400,9 +402,11 @@ DEFAULT_CONFIGURATION = "\
     -Duse_system_flac=1 \
     -Duse_system_harfbuzz=1 \
     -Duse_system_libevent=1 \
+    -Duse_system_libexif=1 \
     -Duse_system_libjpeg=1 \
     -Duse_system_libpng=1 \
     -Duse_system_libusb=1 \
+    -Duse_system_libwebp=1 \
     -Duse_system_libxslt=1 \
     -Duse_system_speex=1 \
     -Duse_system_yasm=1 \
@@ -422,8 +426,8 @@ DEFAULT_CONFIGURATION = "\
 # Not available on Yocto, so we use
 # what comes bundled with Chromium.
 # -Duse_system_jsoncpp=1
+# -Duse_system_libsrtp=1
 # -Duse_system_libvpx=1
-# -Duse_system_libwebp=1
 # -Duse_system_libxnvctrl=1
 # -Duse_system_opus=1
 # -Duse_system_protobuf=1
