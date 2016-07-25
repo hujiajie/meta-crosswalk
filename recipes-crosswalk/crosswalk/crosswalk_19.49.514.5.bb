@@ -387,7 +387,7 @@ DEFAULT_CONFIGURATION = "\
     -Dlinux_use_bundled_binutils=0 \
     -Dlinux_use_bundled_gold=0 \
     -Dlinux_use_debug_fission=0 \
-    -Dlinux_use_gold_flags=0 \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'ld-is-gold', '-Dlinux_use_gold_flags=1', '-Dlinux_use_gold_flags=0', d)} \
     -Drelease_extra_cflags='-Wno-error=unused-local-typedefs' \
     -Dsysroot='' \
     -Ddisable_nacl=1 \
