@@ -370,9 +370,7 @@ DEPENDS = "\
     nss \
     pango \
     pciutils \
-    pkgconfig-native \
     ${@bb.utils.contains('DISTRO_FEATURES', 'pulseaudio', 'pulseaudio', '', d)} \
-    speex \
     yasm-native \
     "
 
