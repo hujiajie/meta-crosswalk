@@ -439,11 +439,11 @@ do_configure() {
     # Attempt to link on 32-bits systems.
     export LDFLAGS="${LDFLAGS} -Wl,--no-keep-memory"
 
-    # Force the host compiler. When building for 64-bits target in a 64-bits host,
-    # the tools built by Chromium (mostly generators) were not working because apparently
-    # the target compiler is being used and the output is not always valid on the host.
-    export CC_host="gcc"
-    export CXX_host="g++"
+    export CC_host="${BUILD_CC}"
+    export CXX_host="${BUILD_CXX}"
+    export CPPFLAGS_host="${BUILD_CPPFLAGS}"
+    export CFLAGS_host="${BUILD_CFLAGS}"
+    export CXXFLAGS_host="${BUILD_CXXFLAGS}"
 
     build/linux/unbundle/replace_gyp_files.py ${DEFAULT_CONFIGURATION}
     xwalk/tools/upstream_revision.py -r $(grep ^blink_upstream_rev xwalk/DEPS.xwalk |cut -d\' -f2) -o xwalk/build/UPSTREAM.blink
