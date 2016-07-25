@@ -341,7 +341,6 @@ DEPENDS = "\
     dbus \
     elfutils \
     expat \
-    flac \
     flex-native \
     fontconfig \
     freetype \
@@ -350,7 +349,6 @@ DEPENDS = "\
     glib-2.0 \
     gperf-native \
     gtk+ \
-    harfbuzz \
     jpeg \
     krb5 \
     libdrm \
@@ -358,8 +356,6 @@ DEPENDS = "\
     libexif \
     libgcc \
     libnotify \
-    libpng \
-    libusb \
     libwebp \
     libx11 \
     libxcomposite \
@@ -370,7 +366,6 @@ DEPENDS = "\
     libxi \
     libxrandr \
     libxrender \
-    libxslt \
     libxss \
     libxtst \
     ninja-native \
@@ -408,17 +403,21 @@ DEFAULT_CONFIGURATION = "\
     ${@bb.utils.contains('DISTRO_FEATURES', 'pulseaudio', '-Duse_pulseaudio=1', '-Duse_pulseaudio=0', d)} \
     -Duse_system_fontconfig=1 \
     -Duse_system_expat=1 \
-    -Duse_system_flac=1 \
-    -Duse_system_harfbuzz=1 \
     -Duse_system_libevent=1 \
     -Duse_system_libexif=1 \
     -Duse_system_libjpeg=1 \
-    -Duse_system_libpng=1 \
-    -Duse_system_libusb=1 \
     -Duse_system_libwebp=1 \
-    -Duse_system_libxslt=1 \
     -Duse_system_yasm=1 \
     "
+
+# The following flags are not enabled yet because GYP incorrectly tells
+# pkg-config to search for *.pc files in host sysroot instead of target
+# sysroot.
+# -Duse_system_flac=1
+# -Duse_system_harfbuzz=1
+# -Duse_system_libpng=1
+# -Duse_system_libusb=1
+# -Duse_system_libxslt=1
 
 # Yocto's libav doesn't fully replace ffmpeg,
 # icu is old and is missing a few symbols,
