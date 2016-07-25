@@ -412,30 +412,29 @@ DEFAULT_CONFIGURATION = "\
 # sysroot.
 # -Duse_system_flac=1
 # -Duse_system_harfbuzz=1
+# -Duse_system_icu=1
 # -Duse_system_libpng=1
 # -Duse_system_libusb=1
-# -Duse_system_libxslt=1
-
-# Yocto's libav doesn't fully replace ffmpeg,
-# icu is old and is missing a few symbols,
-# libxml2 is also is a bit old and has missing
-# symbols, Chromium has some patches on sqlite
-# and zlib is missing minizip/unzip.h.
-# -Duse_system_ffmpeg=1
-# -Duse_system_icu=1
+# -Duse_system_libvpx=1
 # -Duse_system_libxml=1
+# -Duse_system_libxslt=1
+# -Duse_system_opus=1
 # -Duse_system_sqlite=1
+
+# System ffmpeg requires a matching entry in LICENSE_FLAGS_WHITELIST.
+# -Duse_system_ffmpeg=1
+
+# System zlib is missing minizip.
 # -Duse_system_zlib=1
+
+# System protobuf is a bit old.
+# -Duse_system_protobuf=1
 
 # Not available on Yocto, so we use
 # what comes bundled with Chromium.
 # -Duse_system_jsoncpp=1
-# -Duse_system_libvpx=1
 # -Duse_system_libxnvctrl=1
-# -Duse_system_opus=1
-# -Duse_system_protobuf=1
 # -Duse_system_re2=1
-# -Duse_system_skia=1
 # -Duse_system_snappy=1
 # -Duse_system_v8=1
 
