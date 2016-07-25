@@ -392,8 +392,8 @@ DEFAULT_CONFIGURATION = "\
     -Duse_gconf=0 \
     -Duse_gnome_keyring=0 \
     ${@bb.utils.contains('DISTRO_FEATURES', 'pulseaudio', '-Duse_pulseaudio=1', '-Duse_pulseaudio=0', d)} \
-    -Duse_system_fontconfig=1 \
     -Duse_system_expat=1 \
+    -Duse_system_fontconfig=1 \
     -Duse_system_libevent=1 \
     -Duse_system_libexif=1 \
     -Duse_system_libjpeg=1 \
