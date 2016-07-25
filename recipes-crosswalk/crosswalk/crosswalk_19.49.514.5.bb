@@ -408,7 +408,6 @@ DEFAULT_CONFIGURATION = "\
     -Duse_system_libusb=1 \
     -Duse_system_libwebp=1 \
     -Duse_system_libxslt=1 \
-    -Duse_system_speex=1 \
     -Duse_system_yasm=1 \
     "
 
@@ -432,7 +431,6 @@ DEFAULT_CONFIGURATION = "\
 # -Duse_system_opus=1
 # -Duse_system_protobuf=1
 # -Duse_system_re2=1
-# -Duse_system_skia=1
 # -Duse_system_snappy=1
 # -Duse_system_v8=1
 
