@@ -378,9 +378,7 @@ DEPENDS = "\
     nss \
     pango \
     pciutils \
-    pkgconfig-native \
     ${@bb.utils.contains('DISTRO_FEATURES', 'pulseaudio', 'pulseaudio', '', d)} \
-    speex \
     yasm-native \
     "
 
@@ -419,7 +417,6 @@ DEFAULT_CONFIGURATION = "\
     -Duse_system_libusb=1 \
     -Duse_system_libwebp=1 \
     -Duse_system_libxslt=1 \
-    -Duse_system_speex=1 \
     -Duse_system_yasm=1 \
     "
 
