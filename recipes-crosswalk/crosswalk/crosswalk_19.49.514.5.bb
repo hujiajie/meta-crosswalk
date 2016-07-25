@@ -391,6 +391,7 @@ DEFAULT_CONFIGURATION = "\
     -Dsysroot='${STAGING_DIR_HOST}' \
     -Ddisable_bundled_extensions=1 \
     -Ddisable_nacl=1 \
+    -Duse_cups=0 \
     -Duse_gconf=0 \
     -Duse_gnome_keyring=0 \
     ${@bb.utils.contains('DISTRO_FEATURES', 'pulseaudio', '-Duse_pulseaudio=1', '-Duse_pulseaudio=0', d)} \
