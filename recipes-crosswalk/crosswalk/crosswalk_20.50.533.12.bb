@@ -324,6 +324,8 @@ SRC_URI += "\
 SRC_URI[tarball.md5sum] = "951d93f0089f960d18ceaf9b9aa06e36"
 SRC_URI[tarball.sha256sum] = "e744d043ac93f63fef2aa892bcaa6d33a57a9f5ac277a9307eb96cd020296016"
 
+PACKAGES =+ "crosswalk-ffmpeg"
+
 COMPATIBLE_MACHINE = "(-)"
 COMPATIBLE_MACHINE_i586 = "(.*)"
 COMPATIBLE_MACHINE_x86-64 = "(.*)"
@@ -377,7 +379,7 @@ DEPENDS = "\
     yasm-native \
     "
 
-RDEPENDS_${PN} += "bash ca-certificates xdg-utils"
+RDEPENDS_${PN} += "bash ca-certificates crosswalk-ffmpeg xdg-utils"
 
 # Special configuration for ARM builds
 ARMFPABI_armv7a = "${@bb.utils.contains('TUNE_FEATURES', 'callconvention-hard', '-Darm_float_abi=hard', '-Darm_float_abi=softfp', d)}"
@@ -533,6 +535,7 @@ do_install() {
     ln -snf /opt/crosswalk-project/crosswalk ${D}${bindir}/xwalk
 }
 
+FILES_${PN}-ffmpeg = "/opt/crosswalk-project/lib/libffmpeg.so"
 FILES_${PN} += "/opt/crosswalk-project"
 
 PACKAGE_DEBUG_SPLIT_STYLE = "debug-without-src"
