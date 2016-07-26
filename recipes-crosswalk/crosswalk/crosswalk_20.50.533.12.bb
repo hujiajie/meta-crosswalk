@@ -476,7 +476,6 @@ do_install() {
 }
 
 FILES_${PN} = "${bindir}/xwalk ${libdir}/xwalk/*"
-FILES_${PN}-dbg = "${bindir}/.debug/ ${libdir}/xwalk/.debug/"
 
 PACKAGE_DEBUG_SPLIT_STYLE = "debug-without-src"
 
