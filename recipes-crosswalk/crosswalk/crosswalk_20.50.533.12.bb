@@ -339,7 +339,7 @@ DEPENDS = "\
     cairo \
     cups \
     dbus \
-    elfutils \
+    elfutils-native \
     expat \
     flex-native \
     fontconfig \
@@ -377,7 +377,7 @@ DEPENDS = "\
     yasm-native \
     "
 
-RDEPENDS_${PN} += "ca-certificates xdg-utils"
+RDEPENDS_${PN} += "bash ca-certificates xdg-utils"
 
 # Special configuration for ARM builds
 ARMFPABI_armv7a = "${@bb.utils.contains('TUNE_FEATURES', 'callconvention-hard', '-Darm_float_abi=hard', '-Darm_float_abi=softfp', d)}"
