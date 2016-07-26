@@ -433,6 +433,8 @@ DEFAULT_CONFIGURATION = "\
 # -Duse_system_snappy=1
 # -Duse_system_v8=1
 
+B = "${S}/out/Release"
+
 do_configure() {
     cd ${S}
 
@@ -454,15 +456,15 @@ do_configure() {
 }
 
 do_compile() {
-    ninja ${PARALLEL_MAKE} -C ${S}/out/Release xwalk
+    ninja ${PARALLEL_MAKE} -C ${B} xwalk
 }
 
 do_install() {
     install -d ${D}${libdir}/xwalk/
-    install -m 0755 ${S}/out/Release/xwalk ${D}${libdir}/xwalk/xwalk
-    install -m 0644 ${S}/out/Release/icudtl.dat ${D}${libdir}/xwalk/icudtl.dat
-    install -m 0644 ${S}/out/Release/libffmpegsumo.so ${D}${libdir}/xwalk/libffmpegsumo.so
-    install -m 0644 ${S}/out/Release/xwalk.pak ${D}${libdir}/xwalk/xwalk.pak
+    install -m 0755 ${B}/xwalk ${D}${libdir}/xwalk/xwalk
+    install -m 0644 ${B}/icudtl.dat ${D}${libdir}/xwalk/icudtl.dat
+    install -m 0644 ${B}/libffmpegsumo.so ${D}${libdir}/xwalk/libffmpegsumo.so
+    install -m 0644 ${B}/xwalk.pak ${D}${libdir}/xwalk/xwalk.pak
 
     install -d ${D}${bindir}/
     ln -sf ${libdir}/xwalk/xwalk ${D}${bindir}/xwalk
