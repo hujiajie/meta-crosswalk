@@ -450,7 +450,6 @@ do_configure() {
     unset PKG_CONFIG_SYSROOT_DIR
 
     build/linux/unbundle/replace_gyp_files.py ${DEFAULT_CONFIGURATION}
-    xwalk/tools/upstream_revision.py -r $(grep ^blink_upstream_rev xwalk/DEPS.xwalk |cut -d\' -f2) -o xwalk/build/UPSTREAM.blink
     xwalk/gyp_xwalk --depth=. ${DEFAULT_CONFIGURATION} -I${WORKDIR}/include.gypi
 }
 
