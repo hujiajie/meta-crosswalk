@@ -405,6 +405,7 @@ DEFAULT_CONFIGURATION = "\
     -Duse_system_libjpeg=1 \
     -Duse_system_libwebp=1 \
     -Duse_system_yasm=1 \
+    -Dwerror= \
     "
 
 # The following flags are not enabled yet because GYP incorrectly tells
@@ -439,6 +440,8 @@ DEFAULT_CONFIGURATION = "\
 # -Duse_system_v8=1
 
 do_configure() {
+    export CXXFLAGS="${CXXFLAGS} -fpermissive"
+
     # Attempt to link on 32-bits systems.
     export LDFLAGS="${LDFLAGS} -Wl,--no-keep-memory"
 
