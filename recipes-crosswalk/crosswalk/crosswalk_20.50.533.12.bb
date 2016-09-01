@@ -539,6 +539,3 @@ FILES_${PN}-ffmpeg = "/opt/crosswalk-project/lib/libffmpeg.so"
 FILES_${PN} += "/opt/crosswalk-project"
 
 PACKAGE_DEBUG_SPLIT_STYLE = "debug-without-src"
-
-# TODO(hujiajie): Remove this after the recipe is finalized.
-DEFAULT_PREFERENCE = "-1"
