@@ -319,8 +319,8 @@ SRC_URI += "\
     file://include.gypi \
     "
 
-SRC_URI[tarball.md5sum] = "951d93f0089f960d18ceaf9b9aa06e36"
-SRC_URI[tarball.sha256sum] = "e744d043ac93f63fef2aa892bcaa6d33a57a9f5ac277a9307eb96cd020296016"
+SRC_URI[tarball.md5sum] = "53c2dc95324c6f9918215e005a764c93"
+SRC_URI[tarball.sha256sum] = "824199dbc62b5b8c37b5023111584b0ce0ca1a88c56e54a8c008a25d903998cb"
 
 PACKAGES =+ "crosswalk-ffmpeg"
 
