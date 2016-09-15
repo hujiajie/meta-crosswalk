@@ -441,8 +441,6 @@ DEFAULT_CONFIGURATION = "\
 # -Duse_system_v8=1
 
 do_configure() {
-    cd ${S}
-
     # Attempt to link on 32-bits systems.
     export LDFLAGS="${LDFLAGS} -Wl,--no-keep-memory"
 
