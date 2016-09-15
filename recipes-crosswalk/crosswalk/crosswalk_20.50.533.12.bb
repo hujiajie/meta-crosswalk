@@ -461,17 +461,17 @@ do_configure() {
 }
 
 do_compile() {
-    ninja ${PARALLEL_MAKE} -C ${B}/out/Release xwalk
+    ninja ${PARALLEL_MAKE} -C out/Release xwalk
 }
 
 do_install() {
     # TODO(hujiajie): The following script shares the same logic with that of
     # Crosswalk for desktop Linux, but unfortunately it cannot fit well due to
     # the following issues:
-    # 1) ${B}/out/Release/installer/common/installer.include may be incompatible with
+    # 1) out/Release/installer/common/installer.include may be incompatible with
     #    /bin/sh in build host (which is actually dash in Debian and its
     #    derivations).
-    # 2) ${B}/out/Release/installer/common/eu-strip may fail to load because RPATH (if
+    # 2) out/Release/installer/common/eu-strip may fail to load because RPATH (if
     #    specified) is no longer valid in this copy.
     # 3) Debug symbols are stripped by installer.include, while they should be
     #    retained to populate the *-dbg packages later.
@@ -479,33 +479,33 @@ do_install() {
 
     # Add these files to the build output so the build archives will be
     # "hermetic" for packaging.
-    # mkdir -p ${B}/out/Release/installer
-    # cp ${S}/xwalk/VERSION ${B}/out/Release/installer/
-    # mkdir -p ${B}/out/Release/installer/common
-    # cp `which eu-strip` ${B}/out/Release/installer/common/
-    # cp -r ${S}/xwalk/tools/installer/common/* ${B}/out/Release/installer/common/
+    # mkdir -p out/Release/installer
+    # cp ${S}/xwalk/VERSION out/Release/installer/
+    # mkdir -p out/Release/installer/common
+    # cp `which eu-strip` out/Release/installer/common/
+    # cp -r ${S}/xwalk/tools/installer/common/* out/Release/installer/common/
 
     # export STAGEDIR="${D}"
-    # export BUILDDIR="${B}/out/Release"
+    # export BUILDDIR="out/Release"
     # export USR_BIN_SYMLINK_NAME="xwalk"
-    # . ${B}/out/Release/installer/common/installer.include
-    # . ${B}/out/Release/installer/common/crosswalk.info
+    # . out/Release/installer/common/installer.include
+    # . out/Release/installer/common/crosswalk.info
     # prep_staging_common
     # stage_install_common
 
     install -m 755 -d ${D}/opt/crosswalk-project
-    install -m 755 ${B}/out/Release/xwalk ${D}/opt/crosswalk-project/xwalk
-    install -m 644 ${B}/out/Release/*.pak ${D}/opt/crosswalk-project/
-    install -m 644 ${B}/out/Release/icudtl.dat ${D}/opt/crosswalk-project/
-    if [ -f ${B}/out/Release/natives_blob.bin ]; then
-        install -m 644 ${B}/out/Release/natives_blob.bin ${D}/opt/crosswalk-project/
-        install -m 644 ${B}/out/Release/snapshot_blob.bin ${D}/opt/crosswalk-project/
+    install -m 755 out/Release/xwalk ${D}/opt/crosswalk-project/xwalk
+    install -m 644 out/Release/*.pak ${D}/opt/crosswalk-project/
+    install -m 644 out/Release/icudtl.dat ${D}/opt/crosswalk-project/
+    if [ -f out/Release/natives_blob.bin ]; then
+        install -m 644 out/Release/natives_blob.bin ${D}/opt/crosswalk-project/
+        install -m 644 out/Release/snapshot_blob.bin ${D}/opt/crosswalk-project/
     fi
-    cp -a --no-preserve=ownership ${B}/out/Release/locales ${D}/opt/crosswalk-project/
+    cp -a --no-preserve=ownership out/Release/locales ${D}/opt/crosswalk-project/
     find ${D}/opt/crosswalk-project/locales -type f -exec chmod 644 {} \;
     find ${D}/opt/crosswalk-project/locales -type d -exec chmod 755 {} \;
     for file in nacl_helper nacl_helper_bootstrap; do
-        buildfile="${B}/out/Release/${file}"
+        buildfile="out/Release/${file}"
         if [ -f ${buildfile} ]; then
             strippedfile="${buildfile}.stripped"
             debugfile="${buildfile}.debug"
@@ -513,14 +513,14 @@ do_install() {
             install -m 755 ${strippedfile} ${D}/opt/crosswalk-project/${file}
         fi
     done
-    for filename in ${B}/out/Release/nacl_irt_*.nexe; do
+    for filename in out/Release/nacl_irt_*.nexe; do
         if [ -f ${filename} ]; then
             install -m 644 ${filename} ${D}/opt/crosswalk-project/`basename ${filename}`
         fi
     done
-    if [ -f ${B}/out/Release/lib/libffmpeg.so ]; then
+    if [ -f out/Release/lib/libffmpeg.so ]; then
         install -m 755 -d ${D}/opt/crosswalk-project/lib
-        install -m 755 ${B}/out/Release/lib/libffmpeg.so ${D}/opt/crosswalk-project/lib/
+        install -m 755 out/Release/lib/libffmpeg.so ${D}/opt/crosswalk-project/lib/
     fi
     sed \
         -e "s#@@PROGNAME@@#xwalk#g" \
